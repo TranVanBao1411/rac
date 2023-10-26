@@ -12,40 +12,8 @@ spawn(
                 end
             )
         end
-    end
-)
-repeat
-    pcall(
-      function()
-      task.wait()
-      if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("ChooseTeam") then
-      if getgenv().C["Team"] == "Pirate" then
-      for r, v in pairs(
-        getconnections(
-          game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated
-        )
-      ) do
-      v.Function()
-      end
-      elseif getgenv().C["Team"] == "Marine" then
-      for r, v in pairs(
-        getconnections(
-          game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated
-        )
-      ) do
-      v.Function()
-      end
-      else
-        for r, v in pairs(
-        getconnections(
-          game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated
-        )
-      ) do
-      v.Function()
-      end
-      end
-      end
-      end)
+    end)
+
     until game.Players.LocalPlayer.Team ~= nil
 require(game.ReplicatedStorage:WaitForChild("Notification")).new(
     "<Color=Yellow>Exploit You Are Using: <Color=/> " .. identifyexecutor()
@@ -661,7 +629,7 @@ end
                 Mon = "Snow Demon"
                 LevelQuest = 2
                 NameQuest = "Candy Cane Quest Giver"
-                NameMon = "Snow Demons"
+                NameMon = "Snow Demon"
                 CFrameQuest = CFrame.new(-1150.0400390625, 20.378934860229492, -14446.3349609375)
                 CFrameMon = CFrame.new(-880.2006225585938, 71.24776458740234, -14538.609375)
             end
