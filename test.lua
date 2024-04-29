@@ -258,7 +258,7 @@
       --tp
       function TP(Pos)
     Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-    game:GetService('Players').LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    game.Players.PlayerAdded:Connect(function(player) player.Character.Humanoid.Sit = true end)
     if Distance < 30 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Pos
     elseif Distance < 111 then
