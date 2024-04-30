@@ -958,15 +958,10 @@ end)
       end
    end
          
-         if _G.Link == "Linkvertise" then
-   local applicationName = 'MewingHub'
-   elseif _G.Link == "LootLinks" then
-   local applicationName = 'LuaHub'
-   end
    local SavedKeyPath = "SavedKey.txt"
    local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/Library/retard/OrionUi.lua"))()
    local KeyLibrary = KeyLibrary or loadstring(game:HttpGet('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
-   local KeySystem = KeyLibrary.new(applicationName)
+   local KeySystem = KeyLibrary.new(Links)
    AuthType = "clientid"
    local function Notify(text)
       OrionLib:MakeNotification({
